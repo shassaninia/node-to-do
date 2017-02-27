@@ -1,8 +1,10 @@
 var fs = require('fs');
 
-//Read file synchronously, this will read entire file before running more code
-//first parameter is file to read, second is character encoding of file
-var readme = fs.readFileSync('readme.txt', 'utf8');
+//Will not block other code
+var readme = fs.readFile('readme.txt', 'utf8', function(error,data){
+    console.log(data);
+});
 
-fs.writeFileSync('writeme.txt', readme);
+console.log('this will show before the data from the file because the file read is async')
+
 
