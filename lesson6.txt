@@ -1,0 +1,9 @@
+To be able to export multiple functions and/or properties via module.exports:
+
+    module.exports.counter = counter; //export counter function
+    module.exports.adder = adder; //export adder function
+    module.exports.pi = pi;
+
+Now when re require this exported module, we have access to the counter and adder function and the pi property.
+
+    
