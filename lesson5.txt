@@ -1,0 +1,19 @@
+We do not want to have all our code in one js file (module), so we typically split our code up into modules
+and require the ones that we need.
+
+To use a module in another module, we require it by using the 'require(...)' function and we pass in the module we
+require to use.  For example, if there is a module called counter.js and I want to use it in app.js, I would need to
+require counter.js in app.js by doing:
+
+    require('./count');
+
+The js extension is optional
+
+In order for other modules to be called by others, we need to export what we want to be available.
+So, if we want to make a counter function available, we will do:
+
+module.exports = counter;
+
+Now counter will be available when we require it in another file.
+
+
