@@ -1,4 +1,14 @@
-//The following are some of the functions on the node 'global' object
+//normal function statement
+function sayHi(){
+    console.log('hi');
+}
 
-console.log(__dirname);
-console.log(__filename);
+sayHi();
+
+//function expression
+var sayBye = function(){
+    console.log('bye');
+};
+
+sayBye();
+
