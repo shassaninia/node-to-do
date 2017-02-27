@@ -4,5 +4,5 @@ var fs = require('fs');
 //first parameter is file to read, second is character encoding of file
 var readme = fs.readFileSync('readme.txt', 'utf8');
 
-console.log(readme);
+fs.writeFileSync('writeme.txt', readme);
 
