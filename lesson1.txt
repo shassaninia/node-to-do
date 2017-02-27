@@ -1,0 +1,6 @@
+To run application or file in node:
+
+    node app.js or node app
+
+You must be in the directory of app.js
+
