@@ -1,0 +1,5 @@
+When we write javascript in the browser, the global object is the window object.
+When we write javascript in node, the global object is an object called 'global'.
+There are methods on the 'global' object that we can use straight out of the box.
+
+https://nodejs.org/api/globals.html#globals_global_objects
