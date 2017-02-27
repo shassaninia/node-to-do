@@ -1,14 +1,11 @@
-//normal function statement
-function sayHi(){
-    console.log('hi');
+function callFunction(func){
+    func();
 }
-
-sayHi();
 
 //function expression
 var sayBye = function(){
     console.log('bye');
 };
 
-sayBye();
+callFunction(sayBye);
 
