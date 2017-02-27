@@ -1,7 +1,12 @@
-var stuff = require('./stuff');
+var events = require('events');
 
-console.log(stuff.counter(['john','jane','doe']));
+//create a custom event emitter
+var myEmitter = new events.EventEmitter();
 
-console.log(stuff.adder(3,5));
+//Listen for 'someEvent'
+myEmitter.on('someEvent', function(message){
+    console.log(message);
+});
 
-console.log(stuff.pi);
+//Manually emit 'someEvent' with the data as the second parameter
+myEmitter.emit('someEvent','the event was emitted');
