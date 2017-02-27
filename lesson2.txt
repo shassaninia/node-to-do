@@ -1,0 +1,13 @@
+javascript engine takes javascript and converts into code the computer understands
+    javascript -> c++ -> assembly --> machine code
+
+Google's V8 engine is an example of this engine
+
+Node.js is written in c++
+
+Node.js uses V8 javascript engine which is also written in c++.
+
+v8 is embedded into Node.js
+
+Node.js has other features written in c++ that extend v8 to include additonal features
+
