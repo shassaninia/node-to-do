@@ -6,17 +6,26 @@ var fs = require('fs');
 
 var server = http.createServer(function (req, res) {
     console.log('request was made: ' + req.url);
-    res.writeHead(200, {
-        'Content-Type': 'application/json'
-    });
-
-    var myObj = {
-        name: 'Sam',
-        job:'Developer',
-        age:20
-    };
     
-    res.end(JSON.stringify(myObj));
+    if(req.url === '/home' || req.url === '/')
+    {
+        res.writeHead(200,{'Content-Type': 'text/html'});
+        fs.createReadStream(__dirname + '/index.html').pipe(res);
+    }
+    else if(req.url === '/contact'){
+         res.writeHead(200,{'Content-Type': 'text/html'});
+        fs.createReadStream(__dirname + '/contact.html').pipe(res);
+    }
+    else if(req.url === '/api')
+    {
+        res.writeHead(200,{'Content-Type':'application/json'});
+        var myObj = {name:'sam',age:23};
+        res.end(JSON.stringify(myObj));
+    } else
+    {
+           res.writeHead(404,{'Content-Type': 'text/html'});
+        fs.createReadStream(__dirname + '/404.html').pipe(res);
+    }
 
 });
 
