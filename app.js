@@ -4,11 +4,12 @@ var fs = require('fs');
 //Create read stream to read 'readme.txt'
 //Data will be read in chunks (buffered)
 var myReadStream = fs.createReadStream(__dirname + '/readme.txt','utf8');
+var myWriteStream = fs.createWriteStream(__dirname + '/writeme.txt');
 
 //data event is fired when our buffer is full
 myReadStream.on('data',function(chunk){
     console.log('new chunk received:');
-    console.log(chunk);
+    myWriteStream.write(chunk);
 });
 
 
