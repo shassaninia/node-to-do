@@ -6,11 +6,10 @@ var fs = require('fs');
 var myReadStream = fs.createReadStream(__dirname + '/readme.txt','utf8');
 var myWriteStream = fs.createWriteStream(__dirname + '/writeme.txt');
 
-//data event is fired when our buffer is full
-myReadStream.on('data',function(chunk){
-    console.log('new chunk received:');
-    myWriteStream.write(chunk);
-});
+//pipe from readable stream to a writeable stream
+//can only pipe from readable streams
+//This is the same as listening for the data event
+myReadStream.pipe(myWriteStream);
 
 
 
