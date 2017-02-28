@@ -1,7 +1,7 @@
 var fs = require('fs');
 
-//create direcory synchronously
-fs.mkdirSync('stuff');
+//remove direcory synchronously
+fs.rmdirSync('stuff');
 
 
 
