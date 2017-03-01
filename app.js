@@ -23,7 +23,7 @@ app.get('/contact',function(req,res){
 //:name is dynamic
 app.get('/profile/:name', function(req, res){
    
-   var data = {age:29, job:'developer'};
+   var data = {age:29, job:'developer', hobbies:['eating','fighting','sleeping']};
    res.render('profile', {person: req.params.name, data: data});
 });
 
