@@ -4,6 +4,7 @@
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit sit amet justo ac condimentum. Fusce consequat accumsan sapien sit amet dignissim. Vivamus vel mi eleifend, ultrices dui ac, efficitur felis. Nam eu mauris velit. Aenean vitae lectus eleifend ligula tincidunt aliquam a ac ex. Aliquam in accumsan mi. Vivamus viverra arcu risus, quis interdum ligula pellentesque id. Sed volutpat turpis non commodo interdum. Praesent fringilla in diam eget vulputate. Morbi vel venenatis tellus, in rhoncus metus. Maecenas convallis laoreet rhoncus. Fusce lacinia varius mauris id mattis. Cras auctor, urna at volutpat hendrerit, sapien neque laoreet mi, in cursus magna massa id mi.",
   "main": "app.js",
   "dependencies": {
+    "ejs": "^2.5.6",
     "express": "^4.14.1"
   },
   "devDependencies": {},
