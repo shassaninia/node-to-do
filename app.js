@@ -9,11 +9,11 @@ var app = express();
 //express has extended the request and response
 //and added additional functionality to them
 app.get('/',function(req,res){
-    res.send('this is the homepage');
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/contact',function(req,res){
-    res.send('this is the contact page');
+     res.sendFile(__dirname + '/contact.html');
 });
 
 //:id is dynamic
